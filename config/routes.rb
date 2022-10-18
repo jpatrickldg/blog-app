@@ -4,4 +4,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  unauthenticated :user do
+    root 'home#index', as: :unauthenticated_root
+  end
+
+  authenticated :user do
+    root 'dashboards#index', as: :authenticated_root
+  end
 end
