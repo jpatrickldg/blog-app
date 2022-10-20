@@ -1,0 +1,10 @@
+<div class="flex items-center gap-2 text-2xl font-bold mb-4">
+  <h1>Your Blogs</h1>
+  <%= link_to new_post_path, class: 'block flex items-center font-bold text-base bg-gray-900 hover:bg-gray-700 p-2 py-1 pr-4 text-white rounded-lg' do %>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 font-bold">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+    </svg>
+    <span>Blog</span>
+  <% end %>
+</div>
+<%= render 'shared/posts' %>

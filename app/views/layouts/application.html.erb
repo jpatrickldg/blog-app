@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog App</title>
+    <title>JPLDG Blog App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,9 +12,23 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <main class="container mx-auto mt-10 px-5 flex">
-      <%= yield %>
-    </main>
+    <div class="flex flex-col items-center h-screen">
+      <%= render 'shared/navbar' %>
+      <div class="container mx-auto px-5 my-2 mt-24">
+        <% if notice %>
+          <div class="p-4 py-2 text-sm text-green-700 bg-green-100 rounded-lg" role="notice">
+            <%= notice %>
+          </div>
+        <% end %>
+        <% if alert %>
+          <div class="p-4 py-2 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">
+            <%= alert %>
+          </div>
+        <% end %>
+      </div>
+      <main class="container p-5 flex-auto"> 
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
