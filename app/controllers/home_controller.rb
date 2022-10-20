@@ -7,6 +7,8 @@ class HomeController < ApplicationController
   end
 
   def dashboard
-    @posts = current_user.posts
+    id = current_user.id
+    @current_user_posts = current_user.posts
+    @posts = Post.where.not(user_id: id)
   end
 end

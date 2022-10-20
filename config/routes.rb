@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  resources :posts do
-    post :archive, on: :member
-    post :republish, on: :member
-  end
+  resources :posts, :path => "blogs" 
   devise_for :users, :controllers => { registrations: 'users/registrations' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -15,10 +12,6 @@ Rails.application.routes.draw do
   # authenticated :user do
   #   root 'dashboards#index', as: :authenticated_root
   # end
-  get "/user_blogs" => 'posts#user_blogs'
   get '/dashboard' => 'home#dashboard'
-  get '/blogs' => 'posts#blogs'
-  resources :users do
-    resources :posts, only: [:index]
-  end
+  get '/users/:id/blogs' => 'posts#blogs', as: 'user_blogs'
 end

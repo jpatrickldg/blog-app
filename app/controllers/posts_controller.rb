@@ -1,17 +1,15 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: %i[ show edit update destroy archive republish ]
-  before_action :get_user, only: [:index]
+  before_action :get_user, only: [:blogs]
 
   # GET /posts or /posts.json
   def index
-    # @q = Post.includes(:user).ransack(params[:q])
-    # @posts = @q.result(distinct: true)
-    @posts = @user.posts
+    @posts = Post.all
   end
 
   def blogs
-    @posts = Post.all
+    @posts = @user.posts
   end
 
   # GET /posts/1 or /posts/1.json
@@ -86,7 +84,7 @@ class PostsController < ApplicationController
     end
 
     def get_user
-      @user = User.find(params[:user_id])
+      @user = User.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
