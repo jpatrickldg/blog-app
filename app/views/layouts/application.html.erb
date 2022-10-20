@@ -14,7 +14,7 @@
   <body>
     <div class="flex flex-col items-center h-screen">
       <%= render 'shared/navbar' %>
-      <div class="container mx-auto px-5 my-2 mt-24">
+      <div class="container mx-auto px-5 my-2 mt-[70px] md:mt-24">
         <% if notice %>
           <div class="p-4 py-2 text-sm text-green-700 bg-green-100 rounded-lg" role="notice">
             <%= notice %>
@@ -29,7 +29,7 @@
       <main class="container p-5 flex-auto"> 
         <%= yield %>
       </main>
-      <footer class="w-full bg-gray-900 text-white p-5 flex items-center justify-center mt-8">
+      <footer class="w-full bg-gray-900 text-white px-5 py-2.5 md:py-5 flex items-center justify-center mt-8">
         <span class="block text-xs">© 2022 JPLDG</span>
       </footer>
     </div>
