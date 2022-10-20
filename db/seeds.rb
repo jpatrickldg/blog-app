@@ -8,18 +8,21 @@
 User.create([
   {
     email: 'admin@test.com',
+    username: 'admin',
     password: '123456',
     password_confirmation: '123456',
     role: 'admin'
   },
   {
     email: 'author1@test.com',
+    username: 'author1',
     password: '123456',
     password_confirmation: '123456',
     role: 'author'
   },
   {
     email: 'author2@test.com',
+    username: 'author2',
     password: '123456',
     password_confirmation: '123456',
     role: 'author'
