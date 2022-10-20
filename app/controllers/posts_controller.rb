@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :blogs]
   before_action :set_post, only: %i[ show edit update destroy archive republish ]
   before_action :get_user, only: [:blogs]
 

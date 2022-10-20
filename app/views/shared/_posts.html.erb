@@ -7,7 +7,7 @@
         <% end %>
         <div class="border border-gray-200 rounded-b-lg shadow-md p-2">
           <div class="flex items-center justify-between my-2">
-            <span>Author: <%= link_to post.user.username, user_blogs_path(post.user_id), class: 'hover:underline font-medium' %></span>
+            <span>Author: <%= link_to post.user.username, user_blogs_path(post.user_id), class: 'hover:underline font-medium text-blue-600' %></span>
             <% if user_signed_in? && current_user.email == post.user.email %>
               <div class="flex items-center gap-2">
                 <%= link_to edit_post_path(post), class: 'text-blue-500 hover:text-blue-300 flex items-center' do %>
