@@ -1,6 +1,6 @@
 # Blog App
 
-A simple blog app where users can sign-up then login to share their thoughts with everyone. Click [here](https://jpldg-blog-app.herokuapp.com/) to view the app on Heroku. :smile:
+A simple blog app where users can sign-up then login to share their thoughts with everyone.
 
 ![Screenshot](./screenshots/screenshot1.png)
 ![Screenshot](./screenshots/screenshot2.png)
